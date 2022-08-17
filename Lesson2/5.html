@@ -32,7 +32,73 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+let arg1 = +prompt('Введите первое число');
+let arg2 = +prompt('Введите второе число');
+let operation = prompt('Введите дейсвие:"+", "-", "*", "/"');
+
+/** 
+ * Выполняет действие с двумя первыми аргументами функции по операции, 
+ * переданной в третий параметр.
+ * @param {number} arg1 - Первое число.
+ * @param {number} arg2 - Второе число.
+ * @param {string} operation - Операция, одна из следующих строк:
+ * "+", "-", "*", "/".
+ * @return {number} Результат операции с первыми двумя аргументами функции.
+ * Возвращает NaN, если operation или первые два аргумента заданы
+ * неверно. 
+ */
+function mathOperation(arg1, arg2, operation) {
+  switch (operation) {
+      case "+": return addition(arg1, arg2);
+      case "-": return difference(arg1, arg2);
+      case "*": return multiplication(arg1, arg2);
+      case "/": return division(arg1, arg2);
+      default: return NaN;
+    }
+}
+
+/** 
+ * Считает сумму переданных аргументов.
+ * @param {number} a - Первое число.
+ * @param {number} b - Второе число.
+ * @return {number} Сумма чисел. 
+ */
+function addition(a, b) {
+  return a + b;
+}
+
+/**
+ * Считает разницу переданных аргументов.
+ * @param {number} a - Первое число.
+ * @param {number} b - Второе число.
+ * @return {number} Разница чисел.
+ */
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+/**
+ * Считает произведение переданных аргументов.
+ * @param {number} a - Первое число.
+ * @param {number} b - Второе число.
+ * @return {number} Произведение чисел.
+ */
+function multiplication(a, b) {
+  return a * b;
+}
+
+/**
+ * Считает частное от деления переданных аргументов.
+ * @param {number} a - Первое число.
+ * @param {number} b - Второе число.
+ * @return {number} Частное чисел.
+ */
+function division(a, b) {
+  return a / b;
+} 
+
+console.log(mathOperation(arg1, arg2, operation));
+
 </script>
 </body>
 </html>
