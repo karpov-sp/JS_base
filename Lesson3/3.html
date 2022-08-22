@@ -29,7 +29,11 @@
     },
   ];
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  products.forEach(function(product){
+    product.price *= 0.85
+  });
+
+  console.log(products);
 </script>
 </body>
 </html>

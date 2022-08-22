@@ -44,7 +44,14 @@
     },
   ];
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  // используем стрелочную функцию и оператор опциональной последовательности
+  console.log(products.filter(product => product.photos?.length));
+
+  products.sort((product1, product2) => product1.price - product2.price);
+  
+  console.log(products);
+
+
 </script>
 </body>
 </html>
