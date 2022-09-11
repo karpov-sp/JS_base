@@ -40,8 +40,6 @@ function getTotalBasketCount() {
     count += product.count;
   }
   return count;
-  // альтернативный вариант с использованием reduce
-  //return Object.values(basket).reduce((ass, product) => ass + product.count, 0);
 }
 
 function getTotalBasketPrice() {
@@ -52,9 +50,6 @@ function getTotalBasketPrice() {
     count += product.count * product.price;
   }
   return count;
-  // альтернативный вариант с использованием reduce
-  //return Object.values(basket)
-  //.reduce((ass, product) => ass + product.count * product.price, 0); 
 }
 
 function showProductInBasket(id) {
